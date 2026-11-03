@@ -1,10 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
-
 :root {
-  --bg: #lightcoral;
+  --bg: lightcoral;
   --text: #1a1a1a;
-  --accent: #4f46e5;
+  --accent: #5b55d0;
   --radius: 32px;
+  --grey: lightgrey;
 }
 
 *,
@@ -13,54 +12,62 @@
   box-sizing: border-box;
 }
 
-html {
-  font-family: "Roboto";
-  background: lightcoral;
-  display: flex;
-  margin: 0 auto;
-}
-
 body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  min-height: 100vh;
   margin: 0;
-  font:
-    1rem/1.6 system-ui,
-    sans-serif;
   background: var(--bg);
   color: var(--text);
+  font:
+    1rem/1.6 "Roboto",
+    system-ui,
+    sans-serif;
 }
 
-Button {
-  font-size: 30px;
-  width: 100%;
-  height: 50%;
-  padding: 0 20px;
+button {
+  font-size: 4rem;
+  padding: 1.5rem 1.5rem;
   border-radius: var(--radius);
-  margin: 0 50px;
 }
-Button:active {
+
+button:hover {
+  background-color: #eee;
+}
+
+button:active {
   background-color: lightblue;
 }
+
+button:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+}
+
 .menu {
   display: flex;
-  background-color: lightgray;
   justify-content: center;
+  flex-direction: row;
   align-items: center;
+  gap: 1rem;
   width: 100%;
-  min-height: 120%;
-  padding: 0;
-  margin: 0;
+  min-width: 100px;
+  padding: 40px;
+  background-color: var(--grey);
 }
 
 header {
-  font-size: 50px;
+  font-size: 3rem;
+  text-decoration: underline;
+  position: absolute;
+  background-color: var(--accent);
+  color: var(--bg);
+  text-align: center;
+  padding: 0;
+  top: 0;
+  width: 100%;
 }
-
-#rock {
-}
-#paper {
-}
-#scissor {
+.reset {
+  font-size: 1rem;
 }
