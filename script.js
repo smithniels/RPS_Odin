@@ -2,6 +2,10 @@
 // git commit -m "Describe your change"
 // git push
 
+
+
+
+
 // TODO:
 // playGame function
 // playRound function
@@ -15,23 +19,27 @@ let user = "";
 let target = "";
 let robot = 0;
 let selector = "";
+let computer = "";
 //Selector screen
 
 // User Chooses: 🗿📄✂️
 function rock() {
   const rock = document.querySelector("#rock");
   let selector = document.querySelector("#selector");
+  console.log("human choses: rock");
   selector.textContent = "🗿";
 }
 function paper() {
   const paper = document.querySelector("#paper");
   let selector = document.querySelector("#selector");
+  console.log("human choses: paper");
   selector.textContent = "📄";
 }
 function scissor() {
   const scissor = document.querySelector("#scissor");
   let selector = document.querySelector("#selector");
   selector.textContent = "✂️";
+  console.log("human choses: scissors");
 }
 
 // A function to select the user's choice RPS
@@ -54,22 +62,25 @@ function getRandomInt(i) {
   return Math.floor(Math.random() * i);
 }
 robot = getRandomInt(3);
-console.log(robot);
+
+// console.log("robot choses" + robot);
 
 function getComputerChoice() {
   if (robot === 0) {
-    console.log("rock");
+    computer = "rock";
+    // console.log("rock");
   } else if (robot === 1) {
-    console.log("paper");
+    computer = "paper";
+    // console.log("paper");
   } else if (robot === 2) {
-    console.log("scissor");
+    computer = "scissors";
+    // console.log("scissor");
   }
-  //   console.log("getComputerChoice() has run");
+  console.log("robot chooses " + computer);
   robot = document.querySelector("#robot");
+  return "choice is :" + computer;
 }
-// console.log(robot + "pre");
-robotSelection();
-// console.log(robot + "post");
+getComputerChoice();
 // Display "Robot's Choice"
 
 // A function to compare the two and determine a winner
