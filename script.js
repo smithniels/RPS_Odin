@@ -1,3 +1,7 @@
+// git add .
+// git commit -m "Describe your change"
+// git push
+
 // TODO:
 // playGame function
 // playRound function
@@ -44,6 +48,7 @@ function select() {
 //textContent
 
 // Function to determinme computers choice
+// function getComputerChoice()
 
 function getRandomInt(i) {
   return Math.floor(Math.random() * i);
@@ -51,7 +56,7 @@ function getRandomInt(i) {
 robot = getRandomInt(3);
 console.log(robot);
 
-function robotSelection() {
+function getComputerChoice() {
   if (robot === 0) {
     console.log("rock");
   } else if (robot === 1) {
@@ -59,7 +64,7 @@ function robotSelection() {
   } else if (robot === 2) {
     console.log("scissor");
   }
-  //   console.log("robotSelection() has run");
+  //   console.log("getComputerChoice() has run");
   robot = document.querySelector("#robot");
 }
 // console.log(robot + "pre");
@@ -87,5 +92,3 @@ function reset() {
 }
 
 // getElementById()
-
-
