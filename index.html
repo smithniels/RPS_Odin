@@ -19,18 +19,25 @@ git push
 <header>Rock, Paper, Scissors</header>
 
 <body>
-    <div class="menu">
-        <button onclick="rock()" id="rock">🗿</button>
-        <Button onclick="paper()" id="paper">📄</Button>
-        <Button onclick="scissor()" id="scissor">✂️</Button>
+    <div class='container'><Button class="start" onClick="startGame()"> Start Game </Button>
+    </div>
+    <div class="menu gamebackground">
+        <div class="buttonBox">
+            <Button onclick="rock()" id="rock">🗿</Button>
+            <Button onclick="paper()" id="paper">📄</Button>
+            <Button onclick="scissor()" id="scissor">✂️</Button>
+        </div>
         <div class="lower">
             <button onClick="reset()" class="reset">reset</button>
-            <div class="scoreboard">#</div>
+            <div id="scoreboard">#</div>
             <div id="selector">#</div>
             <div id="robot">#</div>
         </div>
-    </div>
-    <div>
+
+
+        <div class="roboMoves">
+            <p>Robot chooses...</p>
+        </div>
     </div>
 </body>
 

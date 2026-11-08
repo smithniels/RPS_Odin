@@ -2,10 +2,6 @@
 // git commit -m "Describe your change"
 // git push
 
-
-
-
-
 // TODO:
 // playGame function
 // playRound function
@@ -20,6 +16,13 @@ let target = "";
 let robot = 0;
 let selector = "";
 let computer = "";
+
+// Start game
+function startGame() {
+  console.log("game begun");
+  // "Choose a move"
+}
+
 //Selector screen
 
 // User Chooses: 🗿📄✂️
@@ -55,9 +58,7 @@ function select() {
 // display "SELECTION"
 //textContent
 
-// Function to determinme computers choice
-// function getComputerChoice()
-
+// Roboto Chooses: 🗿📄✂️
 function getRandomInt(i) {
   return Math.floor(Math.random() * i);
 }
@@ -68,20 +69,22 @@ robot = getRandomInt(3);
 function getComputerChoice() {
   if (robot === 0) {
     computer = "rock";
-    // console.log("rock");
+    robot.textContent = "🗿";
   } else if (robot === 1) {
     computer = "paper";
+    robot.textContent = "📄";
     // console.log("paper");
   } else if (robot === 2) {
     computer = "scissors";
+    robot.textContent = "✂️";
     // console.log("scissor");
   }
-  console.log("robot chooses " + computer);
   robot = document.querySelector("#robot");
   return "choice is :" + computer;
 }
 getComputerChoice();
 // Display "Robot's Choice"
+console.log("robot chooses " + computer);
 
 // A function to compare the two and determine a winner
 // ✂️ > 📄

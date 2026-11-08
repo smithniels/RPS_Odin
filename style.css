@@ -10,9 +10,10 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  border: var(--accent) 2px dotted;
 }
 
-body {
+Body {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -26,23 +27,46 @@ body {
     sans-serif;
 }
 
-button {
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+Button {
   font-size: 4rem;
   padding: 1.5rem 1.5rem;
   border-radius: var(--radius);
 }
 
-button:hover {
+.lower {
+  justify-content: center;
+  align-items: center;
+}
+Button.start {
+  /* padding: .5rem .5rem; */
+  background-color: var(--accent);
+  color: var(--grey);
+  font-size: 1.1rem;
+}
+
+Button:hover {
   background-color: #eee;
 }
 
-button:active {
+Button:active {
   background-color: lightblue;
 }
 
 button:focus-visible {
   outline: 3px solid var(--accent);
   outline-offset: 2px;
+}
+
+.buttonBox {
+  flex-basis: (100%);
+  border: 2px solid black;
+  border-radius: 10px;
+  background-color: #c1c1c1;
 }
 
 .menu {
@@ -68,6 +92,16 @@ header {
   top: 0;
   width: 100%;
 }
+
 .reset {
   font-size: 1rem;
+}
+
+.gameBackground {
+  background-color: aqua;
+}
+
+.roboMoves {
+  display: flex;
+  background-color: black;
 }
