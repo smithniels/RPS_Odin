@@ -63,6 +63,9 @@ button:focus-visible {
 }
 
 .buttonBox {
+  /* display: flex;
+  flex-direction: row;*/
+  gap: 20px;
   flex-basis: (100%);
   border: 2px solid black;
   border-radius: 10px;
