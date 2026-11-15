@@ -31,18 +31,24 @@ function rock() {
   let selector = document.querySelector("#selector");
   console.log("human choses: rock");
   selector.textContent = "🗿";
+  getComputerChoice();
+  console.log("robot chooses: " + computer);
 }
 function paper() {
   const paper = document.querySelector("#paper");
   let selector = document.querySelector("#selector");
   console.log("human choses: paper");
   selector.textContent = "📄";
+  getComputerChoice();
+  console.log("robot chooses: " + computer);
 }
 function scissor() {
   const scissor = document.querySelector("#scissor");
   let selector = document.querySelector("#selector");
   selector.textContent = "✂️";
-  console.log("human choses: scissors");
+  getComputerChoice();
+
+  console.log("robot chooses: " + computer);
 }
 
 // A function to select the user's choice RPS
@@ -62,29 +68,27 @@ function select() {
 function getRandomInt(i) {
   return Math.floor(Math.random() * i);
 }
-robot = getRandomInt(3);
+// robot = getRandomInt(3); // unneeded here
 
 // console.log("robot choses" + robot);
 
 function getComputerChoice() {
+  robot = getRandomInt(3);
   if (robot === 0) {
     computer = "rock";
     robot.textContent = "🗿";
   } else if (robot === 1) {
     computer = "paper";
     robot.textContent = "📄";
-    // console.log("paper");
   } else if (robot === 2) {
     computer = "scissors";
     robot.textContent = "✂️";
-    // console.log("scissor");
   }
   robot = document.querySelector("#robot");
   return "choice is :" + computer;
 }
-getComputerChoice();
+
 // Display "Robot's Choice"
-console.log("robot chooses " + computer);
 
 // A function to compare the two and determine a winner
 // ✂️ > 📄
