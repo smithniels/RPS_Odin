@@ -104,13 +104,13 @@ function decide() {
   } else if (computer === "paper" && user === "rock") {
     console.log("robot wins");
   } else if (computer === "paper" && user === "scissor") {
-    console.log("users wins");
+    console.log("user wins");
   } else if (computer === "rock" && user === "paper") {
     console.log("user wins");
   } else if (computer === "rock" && user === "rock") {
     console.log("that's a tie!");
   } else if (computer === "rock" && user === "scissor") {
-    console.log("that's a tie!");
+    console.log("robot wins");
   }
 }
 
