@@ -10,7 +10,6 @@
 *::before,
 *::after {
   box-sizing: border-box;
-  border: var(--accent) 2px dotted;
 }
 
 Body {
@@ -43,7 +42,6 @@ Button {
   align-items: center;
 }
 Button.start {
-  /* padding: .5rem .5rem; */
   background-color: var(--accent);
   color: var(--grey);
   font-size: 1.1rem;
@@ -63,19 +61,20 @@ button:focus-visible {
 }
 
 .buttonBox {
-  /* display: flex;
-  flex-direction: row;*/
+  display: flex;
+  flex-direction: row;
   gap: 20px;
   flex-basis: (100%);
   border: 2px solid black;
+  padding: 2rem;
   border-radius: 10px;
-  background-color: #c1c1c1;
+  /* background-color: #c1c1c1; */
 }
 
 .menu {
   display: flex;
   justify-content: center;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   gap: 1rem;
   width: 100%;
@@ -106,5 +105,14 @@ header {
 
 .roboMoves {
   display: flex;
-  background-color: black;
+  align-items: center;
+  font-size: 1.4rem;
+  flex-direction: column;
+}
+
+.userMoves {
+  display: flex;
+  align-items: center;
+  font-size: 1.4rem;
+  flex-direction: column;
 }
