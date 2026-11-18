@@ -17,12 +17,9 @@ git push
 <header>Rock 🗿, Paper 📄, Scissors ✂️</header>
 
 <body>
-    <div class='container'>
+    <div class='container'><!-- everything goes in this container -->
         <Button class="start" onClick="startGame()"> Start Game </Button>
-
-        <!-- <div id="scoreboard">#</div>
-        Player:
-        Computer: -->
+        <!-- <div id="scoreboard">#</div> -->
         <div class="menu gamebackground">
             <div class="buttonBox">
                 <Button onclick="rock()" id="rock">🗿</Button>
@@ -34,13 +31,11 @@ git push
             <div class="userMoves">
                 <p> User chooses...</p>
                 <div id="selector"></div>
-
             </div>
             <div class="roboMoves">
                 <p>Robot chooses...</p>
                 <div id="robot"></div>
             </div>
-
             <div class="result"></div>
             <div id="result-display"></div>
         </div>
