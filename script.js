@@ -34,13 +34,14 @@ console.log(result);
 
 function paper() {
   const selector = document.querySelector("#selector");
+  selector.classList.add("animate__animated", "animate__bounceOutLeft");
   user = "paper";
   console.log("human choses: paper");
   selector.textContent = "📄";
   getComputerChoice();
   console.log("robot chooses: " + computer);
   decide();
-  console.log(result);
+  // console.log(result);
 }
 
 function rock() {
@@ -51,7 +52,7 @@ function rock() {
   getComputerChoice();
   console.log("robot chooses: " + computer);
   decide();
-  console.log(result);
+  // console.log(result);
 }
 // Scissors is a lil broken IDK why
 function scissors() {
@@ -63,7 +64,7 @@ function scissors() {
   getComputerChoice();
   console.log("robot chooses: " + computer);
   decide();
-  console.log(result);
+  // console.log(result);
 }
 
 // A function to select the user's choice RPS

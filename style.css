@@ -6,6 +6,10 @@
   --grey: lightgrey;
 }
 
+.animate__animated.animate__bounce {
+  --animate-duration: 0.2s;
+}
+
 *,
 *::before,
 *::after {
@@ -37,6 +41,7 @@ Button {
   font-size: 4rem;
   padding: 1.5rem 1.5rem;
   border-radius: var(--radius);
+  max-height: 200px;
 }
 
 .lower {
@@ -117,4 +122,8 @@ header {
   align-items: center;
   font-size: 1.5rem;
   flex-direction: column;
+}
+
+.result-display {
+  color: red;
 }
